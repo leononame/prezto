@@ -1,3 +1,5 @@
+My personal for of Prezto. This is used to hold my zsh theme and dotfiles for zsh up to date. I rebase my custom branch to master, so I don't recommend cloning this repo.
+
 Prezto — Instantly Awesome Zsh
 ==============================
 
