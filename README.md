@@ -1,4 +1,6 @@
 # Prezto — Instantly Awesome Zsh
+==============================
+My personal for of Prezto. This is used to hold my zsh theme and dotfiles for zsh up to date. I rebase my custom branch to master, so I don't recommend cloning this repo.
 
 Prezto is the configuration framework for [Zsh][1]; it enriches the command line
 interface environment with sane defaults, aliases, functions, auto completion,

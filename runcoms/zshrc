@@ -10,4 +10,30 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# Completions
+source <(hcloud completion zsh)
+
+# Aliases
+alias please='sudo $(fc -nl -1)'
+alias vim=`if [ -x "$(command -v nvim)" ]; then echo nvim; else echo vim; fi`
+alias showip='echo $(curl -s ifconfig.me)'
+alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+
+# Environment
+export EDITOR=nvim
+export GIT_EDITOR=nvim
+export XDG_CONFIG_HOME=$HOME/.config
+
+## Go
+export PATH="$HOME/go/bin:$PATH"
+export GOPATH=$HOME/go
+export GO111MODULE=on
+
+# fzf
+export FZF_DEFAULT_COMMAND="rg -l --files"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
+export PATH="$PATH:/home/leo/Documents/software/google-cloud-sdk/bin"
+
