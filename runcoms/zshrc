@@ -18,6 +18,8 @@ alias please='sudo $(fc -nl -1)'
 alias vim=`if [ -x "$(command -v nvim)" ]; then echo nvim; else echo vim; fi`
 alias showip='echo $(curl -s ifconfig.me)'
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+alias update='yay -Syu --noconfirm'
+source /home/leo/Documents/software/zsh-notify/notify.plugin.zsh
 
 # Environment
 export EDITOR=nvim
