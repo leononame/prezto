@@ -19,6 +19,8 @@ alias vim=`if [ -x "$(command -v nvim)" ]; then echo nvim; else echo vim; fi`
 alias showip='echo $(curl -s ifconfig.me)'
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 alias update='yay -Syu --noconfirm'
+alias pipu="pip list --outdated --format=freeze | grep -v '^\\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
+alias stripexif='-makernotes:all= -composite:all= '
 source /home/leo/Documents/software/zsh-notify/notify.plugin.zsh
 
 # Environment
