@@ -73,6 +73,9 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 #
 # Git
 #
+zstyle :prompt:pure:git:stash show yes
+zstyle :prompt:pure:prompt:success color 'green'
+zstyle :prompt:pure:path color '%(!.magenta.blue)'
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
