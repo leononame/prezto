@@ -5,8 +5,12 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+export HISTFILE="$HOME/.zhistory"
+export HISTSIZE=10000000
+export SAVEHIST=10000000
+
 export PURE_PROMPT_SYMBOL='%(!.#.$)'
-export LC_ALL='en_US.UTF_8'
+export LC_ALL='gl_ES.UTF_8'
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -24,6 +28,17 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 alias update='yay -Syu --noconfirm'
 alias pipu="pip list --outdated --format=freeze | grep -v '^\\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
 alias stripexif='-makernotes:all= -composite:all= '
+alias gc='git commit --no-verify'
+alias gcd='git branch | fzf | xargs git checkout'
+
+alias ll='exa -al --git --git-ignore'
+alias la='exa -al --git'
+alias lat='exa -al --git --git-ignore -T'
+alias lat1='exa -al --git --git-ignore -T --level=1'
+alias lat2='exa -al --git --git-ignore -T --level=2'
+alias lat3='exa -al --git --git-ignore -T --level=3'
+
+# alias
 source /home/leo/Documents/software/zsh-notify/notify.plugin.zsh
 
 # Environment
