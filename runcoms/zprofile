@@ -48,10 +48,6 @@ export PAGER='less'
 # Language
 #
 
-if [[ -z "$PROFILE_LOADED" ]]; then
-        source ~/.profile
-fi
-
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
@@ -92,3 +88,14 @@ fi
 if [[ -z "$LESSOPEN" ]] && (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+export PAGER="less"
+export BROWSER="firefox"
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORMTHEME=qt5ct
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
