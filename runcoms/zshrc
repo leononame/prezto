@@ -35,8 +35,6 @@ alias lat1='exa -al --git --git-ignore -T --level=1'
 alias lat2='exa -al --git --git-ignore -T --level=2'
 alias lat3='exa -al --git --git-ignore -T --level=3'
 
-source /home/leo/code/software/zsh-notify/notify.plugin.zsh
-
 # Environment
 export EDITOR=nvim
 export GIT_EDITOR=nvim
@@ -64,3 +62,8 @@ if [ -f '/home/leo/code/software/google-cloud-sdk/path.zsh.inc' ]; then . '/home
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/leo/code/software/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/leo/code/software/google-cloud-sdk/completion.zsh.inc'; fi
 
+source /home/leo/code/software/zsh-notify/notify.plugin.zsh
+
+# fuck these overly slow hooks
+export HUSKY_SKIP_HOOKS=1
+# source /usr/share/nvm/init-nvm.sh
