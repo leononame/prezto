@@ -14,37 +14,6 @@ if [[ -z "$BROWSER" && "$OSTYPE" == darwin* ]]; then
 fi
 
 #
-# Editors
-#
-
-if [[ -z "$EDITOR" ]]; then
-  export EDITOR='nvim'
-fi
-if [[ -z "$VISUAL" ]]; then
-  export VISUAL='nvim'
-fi
-if [[ -z "$PAGER" ]]; then
-  export PAGER='less'
-fi
-
-#
-||||||| parent of ff84e04 (update for leo)
-# Browser
-#
-
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
-
-#
-# Editors
-#
-
-export EDITOR='nvim'
-export VISUAL='nvim'
-export PAGER='less'
-
-#
 # Language
 #
 
@@ -98,4 +67,6 @@ export BROWSER="firefox"
 export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORMTHEME=qt5ct
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+export PATH="$HOME/go/bin:$PATH"
 
