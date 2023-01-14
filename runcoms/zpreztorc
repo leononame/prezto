@@ -36,11 +36,15 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'directory' \
   'spectrum' \
-  'utility' \
-  'completion' \
-  'history-substring-search' \
   'git' \
   'kubectl' \
+  'archive' \
+  'utility' \
+  'mycomps' \
+  'completion' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'autosuggestions' \
   'prompt'
 
 #
@@ -48,7 +52,11 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the query found color.
-# zstyle ':prezto:module:autosuggestions:color' found ''
+#zstyle ':prezto:module:autosuggestions:color' found ''
+# enable color
+zstyle ':prezto:module:autosuggestions' color 'yes'
+# set ctrl+e as command for accepting
+bindkey '^e' autosuggest-accept
 
 #
 # Completions
@@ -66,13 +74,13 @@ zstyle ':prezto:load' pmodule \
 # zstyle ':prezto:module:editor' wordchars '*?_-.[]~&;!#$%^(){}<>'
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'emacs'
+zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Auto convert .... to ../..
 # zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Allow the zsh prompt context to be shown.
-#zstyle ':prezto:module:editor' ps-context 'yes'
+zstyle ':prezto:module:editor' ps-context 'yes'
 
 #
 # Git
@@ -96,13 +104,13 @@ zstyle :prompt:pure:path color '%(!.magenta.blue)'
 #
 
 # Set the file to save the history in when an interactive shell exits.
-# zstyle ':prezto:module:history' histfile "${ZDOTDIR:-$HOME}/.zsh_history"
+zstyle ':prezto:module:history' histfile "${ZDOTDIR:-$HOME}/.zhistory"
 
 # Set the maximum  number  of  events  stored  in  the  internal history list.
-# zstyle ':prezto:module:history' histsize 10000
+zstyle ':prezto:module:history' histsize 10000000
 
 # Set the maximum number of history events to save in the history file.
-# zstyle ':prezto:module:history' savehist 10000
+zstyle ':prezto:module:history' savehist 10000000
 
 #
 # History Substring Search
@@ -201,13 +209,14 @@ zstyle ':prezto:module:prompt' theme 'pure'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'line' \
-#   'cursor' \
-#   'root'
+ zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'pattern' \
+   'line' \
+   'root'
+#brackets+cursor off, some error when navigating echo ${VAR}
+
+
 #
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \

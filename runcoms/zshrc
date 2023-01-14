@@ -5,10 +5,6 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-export HISTFILE="$HOME/.zhistory"
-export HISTSIZE=10000000
-export SAVEHIST=10000000
-
 export PURE_PROMPT_SYMBOL='%(!.#.$)'
 export LC_ALL=en_US.UTF-8
 
