@@ -38,7 +38,6 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'git' \
   'kubectl' \
-  'poetry' \
   'archive' \
   'utility' \
   'mycomps' \
