@@ -46,7 +46,7 @@ export FZF_DEFAULT_COMMAND="rg -l --files"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH:$HOME/code/software/dart-sdk/bin"
+export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH:$HOME/code/software/dart-sdk/bin:$HOME/.pub-cache/bin:$HOME/code/software/flutter/bin:$HOME/code/software/aws/bin"
 
 export AUTO_NOTIFY_THRESHOLD=30
 source /home/leo/code/software/zsh-auto-notify/auto-notify.plugin.zsh
