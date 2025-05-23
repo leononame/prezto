@@ -70,3 +70,4 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 export PATH="$HOME/go/bin:$PATH"
 
+export GOCACHE=/data/go-build
